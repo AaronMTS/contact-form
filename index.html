@@ -16,7 +16,7 @@
             <section>
                 <h1>Get in Touch</h1>
                 <h4>You can reach us anytime</h4>
-                <form action method="post" id="form">
+                <form action="" method="post" id="form">
                     <div>
                         <input type="text" name="first-name" id="first-name"
                             placeholder="First name" required>
@@ -38,7 +38,8 @@
                 <div class="modal-content">
                     <div class="top">
                         <h2>Submitted Data</h2>
-                        <img src="images/close-sm.png" alt="close" id="img-close">
+                        <img src="images/close-sm.png" alt="close"
+                            id="img-close">
                     </div>
                     <ul id="submitted-data">
                     </ul>
@@ -48,35 +49,37 @@
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 const form = document.querySelector("#form");
-                const modal = document.querySelector(".modal");
-                const dataContainer = document.querySelector("#submitted-data");
-                const closeModal = document.querySelector("#img-close");
+                if (form) {
+                    const modal = document.querySelector(".modal");
+                    const dataContainer = document.querySelector("#submitted-data");
+                    const closeModal = document.querySelector("#img-close");
 
-                form.addEventListener("submit", (event) => {
-                    event.preventDefault();
-                    const firstName = document.querySelector("#first-name").value;
-                    const lastName = document.querySelector("#last-name").value;
-                    const age = document.querySelector("#age").value;
-                    const contact = document.querySelector("#contact").value;
-                    const address = document.querySelector("#address").value;
-                    
-                    dataContainer.innerHTML = `
-                    <li><strong>First Name:</strong> ${firstName}</li>
-                    <li><strong>Last Name:</strong> ${lastName}</li>
-                    <li><strong>Age:</strong> ${age}</li>
-                    <li><strong>Contact:</strong> ${contact}</li>
-                    <li><strong>Address:</strong> ${address}</li>
-                    `;
+                    form.addEventListener("submit", (event) => {
+                        event.preventDefault();
+                        const firstName = document.querySelector("#first-name").value;
+                        const lastName = document.querySelector("#last-name").value;
+                        const age = document.querySelector("#age").value;
+                        const contact = document.querySelector("#contact").value;
+                        const address = document.querySelector("#address").value;
 
-                    form.reset();
+                        dataContainer.innerHTML = `
+                        <li><strong>First Name:</strong> ${firstName}</li>
+                        <li><strong>Last Name:</strong> ${lastName}</li>
+                        <li><strong>Age:</strong> ${age}</li>
+                        <li><strong>Contact:</strong> ${contact}</li>
+                        <li><strong>Address:</strong> ${address}</li>
+                        `;
 
-                    modal.style.display = "block";
-                });
+                        form.reset();
 
-                closeModal.addEventListener("click", () => {
-                    dataContainer.innerHTML = '';
-                    modal.style.display = "none"
-                });
+                        modal.style.display = "block";
+                    });
+
+                    closeModal.addEventListener("click", () => {
+                        dataContainer.innerHTML = '';
+                        modal.style.display = "none"
+                    });
+                }
             });
         </script>
     </body>
