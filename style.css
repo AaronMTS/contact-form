@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    font-family: "Raleway", "Inter";
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: radial-gradient(circle closest-side, #BBC3CF, #E7F0FF);
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+}
+
+section {
+    border-radius: 20px;
+    height: fit-content;
+    width: 400px;
+    padding: 26px;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+h1 {
+    margin: 0 0 7px 0;
+}
+
+h4 {
+    margin: 0 0 20px 0;
+}
+
+p {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form div {
+    display: flex;
+    width: 100%;
+    gap: 7px;
+}
+
+form div input {
+    width: 50%;
+}
+
+form input, form textarea {
+    border: 1px solid #BABABA;
+    padding: 13px;
+}
+
+form input {
+    border-radius: 21px;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+form textarea {
+    border-radius: 10px;
+    resize: none;
+}
+
+form button {
+    margin-top: 10px;
+    color: #fff;
+    background-color: #1264FF;
+    border: none;
+    border-radius: 18px;
+    padding: 11px;
+    cursor: pointer;
+}
