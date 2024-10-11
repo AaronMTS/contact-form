@@ -30,7 +30,7 @@ Made as a way to familiarize learners (myself included) to form data handling.
 * Open XAMPP and start the server
    1. Start Apache
 
-   2. In your web browser, go to your index.html
+   2. In your web browser, go to index.html
       ```
       localhost/contact-form/index.html
       ```
